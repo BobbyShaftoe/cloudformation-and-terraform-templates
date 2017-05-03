@@ -1,0 +1,37 @@
+
+
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+
+  "Description": "Simple Cloudformation template to launch ec2 instance",
+  "Parameters": {
+    "KeyPair": {
+      "Description": " The Key Pair for access to these instances",
+      "Type": "String"
+    }
+  },
+
+  "Resources": {
+      "Ec2Instance": {
+          "Properties": {
+              "ImageId": "ami-a95044be",
+              "InstanceType": "t1.micro",
+              "KeyName": {
+                  "Ref": "KeyPair"
+              }
+          },
+          "Type": "AWS::EC2::Instance"
+      }
+  },
+
+  "Outputs" : {
+      "InstanceId": {
+          "Description": "The Instance Ids of the created EC2 instances",
+          "Value": {
+              "Ref": "Ec2Instance"
+          }
+      }
+  }
+
+}
+
