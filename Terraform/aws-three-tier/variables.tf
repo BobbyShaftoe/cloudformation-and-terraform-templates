@@ -23,15 +23,15 @@ variable security_group_id {
 }
 
 variable "app_instance_name" {
-  default = "example_instance"
+  default = "example-app-instance"
 }
 
 variable "web_instance_name" {
-  default = "example_instance"
+  default = "example-web-instance"
 }
 
 variable "rds_instance_name" {
-  default = "example_instance"
+  default = "example-db-instance"
 }
 
 variable "ami_id" {
