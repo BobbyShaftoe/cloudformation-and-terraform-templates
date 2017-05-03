@@ -77,6 +77,7 @@ module "example_ec2_web" {
   create_eip = true
 }
 
+
 module "example_ec2_app" {
   source = "modules/ec2"
   name = "${var.app_instance_name}"
@@ -109,5 +110,4 @@ module "example_main_instance_elb" {
   subnets = ["${module.subnet_public.example_subnet_public_0_id}"]
   security_groups = ["${module.example_security_groups.security_group_elb_id}","${module.example_security_groups.security_group_web_instance_id}"]
   instances = ["${module.example_ec2_app.ec2_id}"]
-
 }
