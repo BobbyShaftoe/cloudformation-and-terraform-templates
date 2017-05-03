@@ -57,5 +57,9 @@ variable "ebs_root_volume_size" {
 }
 
 variable "ebs_root_delete_on_termination" {
-  default = "true"
+  default = true
+}
+
+variable "create_eip" {
+  default = false
 }

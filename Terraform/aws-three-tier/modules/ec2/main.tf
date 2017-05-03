@@ -2,6 +2,7 @@
 resource "aws_eip" "default" {
   instance = "${aws_instance.ec2.id}"
   vpc      = true
+  count    = "${var.create_eip}"
 }
 
 resource "aws_instance" "ec2" {

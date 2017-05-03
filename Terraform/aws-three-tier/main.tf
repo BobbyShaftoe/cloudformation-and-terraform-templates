@@ -74,6 +74,7 @@ module "example_ec2_web" {
   instance_type = "t2.micro"
   domain_name = "some.domain"
   user_data = "#!/bin/bash\necho done"
+  create_eip = true
 }
 
 module "example_ec2_app" {
@@ -87,6 +88,7 @@ module "example_ec2_app" {
   instance_type = "t2.micro"
   domain_name = "some.domain"
   user_data = "#!/bin/bash\necho done"
+  create_eip = false
 }
 
 module "example_rds_instance" {
