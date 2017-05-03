@@ -1,7 +1,7 @@
-variable "subnets" {}
+
 variable "security_groups" {}
 variable "instances" {}
 
-variable "subnets" {
+variable "subnet_cidrs" {
   type = "list"
 }

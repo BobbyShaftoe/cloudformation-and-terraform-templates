@@ -2,7 +2,7 @@ resource "aws_elb" "example_instances_elb" {
   name = "example-elb"
 
   # The same availability zone as our instance
-  subnets = ["${var.subnets}"]
+  subnets = ["${var.subnet_cidrs}"]
 
   security_groups = ["${var.security_groups}"]
 
