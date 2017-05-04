@@ -40,9 +40,6 @@ resource "aws_internet_gateway" "example_ig" {
     Name = "example_ig"
   }
 }
-//output "example_ig_gw" {
-//  value = "${aws_internet_gateway.example_ig.id}"
-//}
 
 resource "aws_route_table" "example_route_table" {
   vpc_id = "${module.vpc.example_vpc_id}"
