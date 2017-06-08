@@ -1,7 +1,7 @@
 // Module specific variables
 variable "name" {
   description = "Instance name"
-  default = "default"
+  default     = "default"
 }
 
 variable "domain_name" {
@@ -10,29 +10,29 @@ variable "domain_name" {
 
 variable "environment" {
   description = "Name of environment type this instance is in"
-  default = "default environment"
+  default     = "default environment"
 }
 
 variable "server_role" {
   description = "Name of role type for this instance"
-  default = "default server role"
+  default     = "default server role"
 }
 
 variable "instance_type" {
-	description = "Type of instance"
-	default = "t2.micro"
+  description = "Type of instance"
+  default     = "t2.micro"
 }
 
 variable "key_name" {
-	description = "SSH keypair you've created"
+  description = "SSH keypair you've created"
 }
 
 variable "user_data" {
-	description = "User data that need to pass to the instance(s)"
+  description = "User data that need to pass to the instance(s)"
 }
 
 variable "security_group_id" {
-	description = "Security Group you've created"
+  description = "Security Group you've created"
 }
 
 variable "subnet_id" {
@@ -45,7 +45,7 @@ variable "ami_id" {
 
 variable "count" {
   description = "Number of instance(s) to be launched"
-  default = "1"
+  default     = "1"
 }
 
 variable "ebs_root_volume_type" {

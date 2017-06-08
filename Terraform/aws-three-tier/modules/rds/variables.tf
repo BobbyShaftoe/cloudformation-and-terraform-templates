@@ -19,7 +19,7 @@ variable "engine" {
 }
 
 variable "engine_version" {
-  default = "9.4.1"
+  default     = "9.4.1"
   description = "Engine version"
 }
 
@@ -45,6 +45,7 @@ variable "password" {
 variable "security_group_id" {
   default = ""
 }
+
 variable "db_subnet_group_name" {
   default = ""
 }

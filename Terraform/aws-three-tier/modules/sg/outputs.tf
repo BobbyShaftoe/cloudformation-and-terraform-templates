@@ -10,8 +10,6 @@ output "security_group_db_instance_id" {
   value = "${aws_security_group.db_instance_sg.id}"
 }
 
-
 output "security_group_elb_id" {
   value = "${aws_security_group.elb_sg.id}"
 }
-
